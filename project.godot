@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="In Practice"
+run/main_scene="uid://cbdwfqqpxgtll"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=500
+window/size/viewport_height=1000
 
 [rendering]
 

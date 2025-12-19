@@ -1,0 +1,126 @@
+[gd_scene load_steps=18 format=3 uid="uid://cbdwfqqpxgtll"]
+
+[ext_resource type="Texture2D" uid="uid://cwit5vn85r2k2" path="res://assets/Background.png" id="1_tel8n"]
+[ext_resource type="Texture2D" uid="uid://dp0l3ngqm6f0g" path="res://assets/Asset 12-8.png" id="2_us6cs"]
+[ext_resource type="Texture2D" uid="uid://clewjsrdesvdf" path="res://assets/4by3 Box-8.png" id="3_vhucb"]
+[ext_resource type="Texture2D" uid="uid://mrutuhacc25s" path="res://assets/Window Border-8.png" id="4_xrfiu"]
+[ext_resource type="Texture2D" uid="uid://cb53jmfkybi45" path="res://assets/Art_Button.png" id="5_xrfiu"]
+[ext_resource type="Texture2D" uid="uid://di1aer11msp17" path="res://assets/Load.png" id="6_jtcve"]
+[ext_resource type="Texture2D" uid="uid://cmiwype45wvro" path="res://assets/New_Data.png" id="7_idxy1"]
+[ext_resource type="Texture2D" uid="uid://cpdabfxro0et5" path="res://assets/Side_Accent.png" id="7_x6rhn"]
+[ext_resource type="Texture2D" uid="uid://rjscqvsfjmrn" path="res://assets/Settings.png" id="8_i38ex"]
+[ext_resource type="Texture2D" uid="uid://dc74wy71mprvt" path="res://assets/Title.png" id="10_p6a23"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tel8n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y62du"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jtcve"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_idxy1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p6a23"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_152mr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8mqvm"]
+
+[node name="HomeMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(250, 500)
+texture = ExtResource("1_tel8n")
+
+[node name="Home Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.892
+anchor_top = 0.421
+anchor_right = 0.892
+anchor_bottom = 0.421
+offset_left = -36.0
+offset_top = -36.0
+offset_right = 36.0
+offset_bottom = 36.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tel8n")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y62du")
+icon = ExtResource("2_us6cs")
+
+[node name="4By3Box-8" type="Sprite2D" parent="."]
+position = Vector2(250, 195)
+texture = ExtResource("3_vhucb")
+
+[node name="WindowBorder-8" type="Sprite2D" parent="."]
+position = Vector2(250, 195)
+texture = ExtResource("4_xrfiu")
+
+[node name="Art Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.151
+anchor_top = 0.42
+anchor_right = 0.151
+anchor_bottom = 0.42
+offset_left = -75.5
+offset_top = -32.0
+offset_right = 75.5
+offset_bottom = 33.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jtcve")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_idxy1")
+icon = ExtResource("5_xrfiu")
+
+[node name="Load Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.871
+anchor_top = 0.764
+anchor_right = 0.871
+anchor_bottom = 0.764
+offset_left = -64.5
+offset_top = -32.0001
+offset_right = 64.5
+offset_bottom = 32.9999
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p6a23")
+icon = ExtResource("6_jtcve")
+
+[node name="New Data Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.766
+anchor_top = 0.846
+anchor_right = 0.766
+anchor_bottom = 0.846
+offset_left = -117.0
+offset_top = -32.0
+offset_right = 117.0
+offset_bottom = 33.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_152mr")
+icon = ExtResource("7_idxy1")
+
+[node name="Settings Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.802
+anchor_top = 0.931
+anchor_right = 0.802
+anchor_bottom = 0.931
+offset_left = -99.0
+offset_top = -32.0001
+offset_right = 99.0
+offset_bottom = 31.9999
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8mqvm")
+icon = ExtResource("8_i38ex")
+
+[node name="SideAccent" type="Sprite2D" parent="."]
+position = Vector2(7, 721)
+texture = ExtResource("7_x6rhn")
+
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(349, 599)
+texture = ExtResource("10_p6a23")
