@@ -247,7 +247,6 @@ stream = ExtResource("16_5rhw2")
 stream = ExtResource("17_w7cjy")
 
 [connection signal="pressed" from="Home Button" to="." method="_on_home_button_pressed"]
-[connection signal="button_down" from="Art Button" to="." method="_on_art_button_button_down"]
 [connection signal="pressed" from="Art Button" to="." method="_on_art_button_pressed"]
 [connection signal="mouse_entered" from="Load Button" to="." method="_on_load_hovered"]
 [connection signal="mouse_exited" from="Load Button" to="." method="_on_load_unhovered"]

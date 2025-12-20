@@ -46,6 +46,7 @@ func _on_settings_unhovered() -> void:
 #--------------------------------------------
 func _on_home_button_pressed() -> void:
 	$ClickSFX.play();
+	#get_tree().change_scene_to_file("res://home_menu.tscn");
 
 func _on_art_button_pressed() -> void:
 	$ClickSFX.play();
@@ -55,6 +56,7 @@ func _on_load_pressed() -> void:
 
 func _on_new_data_pressed() -> void:
 	$ClickSFX.play();
+	get_tree().change_scene_to_file("res://scenes/task_menu.tscn");
 
 func _on_settings_pressed() -> void:
 	$ClickSFX.play();
