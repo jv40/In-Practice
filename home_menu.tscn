@@ -1,27 +1,83 @@
-[gd_scene load_steps=18 format=3 uid="uid://cbdwfqqpxgtll"]
+[gd_scene load_steps=49 format=3 uid="uid://cbdwfqqpxgtll"]
 
+[ext_resource type="Script" uid="uid://scn7flgfyhof" path="res://home_menu.gd" id="1_152mr"]
 [ext_resource type="Texture2D" uid="uid://cwit5vn85r2k2" path="res://assets/Background.png" id="1_tel8n"]
 [ext_resource type="Texture2D" uid="uid://dp0l3ngqm6f0g" path="res://assets/Asset 12-8.png" id="2_us6cs"]
 [ext_resource type="Texture2D" uid="uid://clewjsrdesvdf" path="res://assets/4by3 Box-8.png" id="3_vhucb"]
 [ext_resource type="Texture2D" uid="uid://mrutuhacc25s" path="res://assets/Window Border-8.png" id="4_xrfiu"]
 [ext_resource type="Texture2D" uid="uid://cb53jmfkybi45" path="res://assets/Art_Button.png" id="5_xrfiu"]
 [ext_resource type="Texture2D" uid="uid://di1aer11msp17" path="res://assets/Load.png" id="6_jtcve"]
+[ext_resource type="Texture2D" uid="uid://cnxnnq58rffle" path="res://assets/Load_Selected.png" id="6_y62du"]
 [ext_resource type="Texture2D" uid="uid://cmiwype45wvro" path="res://assets/New_Data.png" id="7_idxy1"]
 [ext_resource type="Texture2D" uid="uid://cpdabfxro0et5" path="res://assets/Side_Accent.png" id="7_x6rhn"]
 [ext_resource type="Texture2D" uid="uid://rjscqvsfjmrn" path="res://assets/Settings.png" id="8_i38ex"]
 [ext_resource type="Texture2D" uid="uid://dc74wy71mprvt" path="res://assets/Title.png" id="10_p6a23"]
+[ext_resource type="Texture2D" uid="uid://c86yxoqvtayt1" path="res://assets/New_Data_Selected.png" id="13_8mqvm"]
+[ext_resource type="Texture2D" uid="uid://coea7i7t7xc8y" path="res://assets/Settings_Selected.png" id="14_5rhw2"]
+[ext_resource type="AudioStream" uid="uid://3d15auetxl2p" path="res://assets/Hover_Sound.mp3" id="15_8mqvm"]
+[ext_resource type="AudioStream" uid="uid://cqb1ee6ycrevp" path="res://assets/Press_Sound.mp3" id="16_5rhw2"]
+[ext_resource type="AudioStream" uid="uid://uii5yb61vpif" path="res://assets/Click_Sound.mp3" id="17_w7cjy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w7cjy"]
+texture = ExtResource("1_tel8n")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tel8n"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y62du"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eab1d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ndph0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dskx0"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jtcve"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sk3yd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8s1cg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_idxy1"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uxljr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y43q2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hqvak"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5rhw2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_arq2b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c8bky"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p6a23"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mgiln"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_atjfp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1nw6p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w7cjy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2dnoa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2lh81"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_152mr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c4i5f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nsvvx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jnprt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_msmrx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ts40c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yb18d"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8mqvm"]
 
@@ -32,10 +88,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_152mr")
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(250, 500)
-texture = ExtResource("1_tel8n")
+[node name="Background Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_w7cjy")
 
 [node name="Home Button" type="Button" parent="."]
 layout_mode = 1
@@ -71,7 +133,12 @@ offset_left = -75.5
 offset_top = -32.0
 offset_right = 75.5
 offset_bottom = 33.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eab1d")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ndph0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_dskx0")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_jtcve")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_sk3yd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8s1cg")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_idxy1")
 icon = ExtResource("5_xrfiu")
 
@@ -86,6 +153,12 @@ offset_left = -64.5
 offset_top = -32.0001
 offset_right = 64.5
 offset_bottom = 32.9999
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uxljr")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_y43q2")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_hqvak")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5rhw2")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_arq2b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c8bky")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_p6a23")
 icon = ExtResource("6_jtcve")
 
@@ -100,6 +173,12 @@ offset_left = -117.0
 offset_top = -32.0
 offset_right = 117.0
 offset_bottom = 33.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mgiln")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_atjfp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_1nw6p")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_w7cjy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_2dnoa")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2lh81")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_152mr")
 icon = ExtResource("7_idxy1")
 
@@ -114,6 +193,12 @@ offset_left = -99.0
 offset_top = -32.0001
 offset_right = 99.0
 offset_bottom = 31.9999
+theme_override_styles/focus = SubResource("StyleBoxEmpty_c4i5f")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_nsvvx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_jnprt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_msmrx")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ts40c")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yb18d")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_8mqvm")
 icon = ExtResource("8_i38ex")
 
@@ -124,3 +209,40 @@ texture = ExtResource("7_x6rhn")
 [node name="Title" type="Sprite2D" parent="."]
 position = Vector2(349, 599)
 texture = ExtResource("10_p6a23")
+
+[node name="LoadSelected" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(397, 763)
+texture = ExtResource("6_y62du")
+
+[node name="NewDataSelected" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(340, 845)
+texture = ExtResource("13_8mqvm")
+
+[node name="SettingsSelected" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(360, 929)
+texture = ExtResource("14_5rhw2")
+
+[node name="HoverSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_8mqvm")
+
+[node name="PressSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_5rhw2")
+
+[node name="ClickSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_w7cjy")
+
+[connection signal="button_down" from="Art Button" to="." method="_on_art_button_button_down"]
+[connection signal="pressed" from="Art Button" to="." method="_on_art_button_pressed"]
+[connection signal="mouse_entered" from="Load Button" to="." method="_on_load_hovered"]
+[connection signal="mouse_exited" from="Load Button" to="." method="_on_load_unhovered"]
+[connection signal="pressed" from="Load Button" to="." method="_on_load_pressed"]
+[connection signal="mouse_entered" from="New Data Button" to="." method="_on_new_data_hovered"]
+[connection signal="mouse_exited" from="New Data Button" to="." method="_on_new_data_unhovered"]
+[connection signal="pressed" from="New Data Button" to="." method="_on_new_data_pressed"]
+[connection signal="mouse_entered" from="Settings Button" to="." method="_on_settings_hovered"]
+[connection signal="mouse_exited" from="Settings Button" to="." method="_on_settings_unhovered"]
+[connection signal="pressed" from="Settings Button" to="." method="_on_settings_pressed"]
+[connection signal="hidden" from="LoadSelected" to="." method="_on_load_selected_hidden"]
