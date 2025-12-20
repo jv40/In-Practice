@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://cbdwfqqpxgtll"]
+[gd_scene load_steps=53 format=3 uid="uid://cbdwfqqpxgtll"]
 
 [ext_resource type="Script" uid="uid://scn7flgfyhof" path="res://home_menu.gd" id="1_152mr"]
 [ext_resource type="Texture2D" uid="uid://cwit5vn85r2k2" path="res://assets/Background.png" id="1_tel8n"]
@@ -21,7 +21,15 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w7cjy"]
 texture = ExtResource("1_tel8n")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tel8n"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v1sb5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_odkqo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kh18g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jau1s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qrkh4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y62du"]
 
@@ -110,7 +118,11 @@ offset_left = -36.0
 offset_top = -36.0
 offset_right = 36.0
 offset_bottom = 36.0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_tel8n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v1sb5")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_odkqo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kh18g")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jau1s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qrkh4")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_y62du")
 icon = ExtResource("2_us6cs")
 
@@ -234,6 +246,7 @@ stream = ExtResource("16_5rhw2")
 [node name="ClickSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_w7cjy")
 
+[connection signal="pressed" from="Home Button" to="." method="_on_home_button_pressed"]
 [connection signal="button_down" from="Art Button" to="." method="_on_art_button_button_down"]
 [connection signal="pressed" from="Art Button" to="." method="_on_art_button_pressed"]
 [connection signal="mouse_entered" from="Load Button" to="." method="_on_load_hovered"]
