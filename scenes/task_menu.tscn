@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c6sv8u6knr06"]
+[gd_scene load_steps=22 format=3 uid="uid://c6sv8u6knr06"]
 
 [ext_resource type="Script" uid="uid://bbvissij3hrsd" path="res://scripts/task_menu.gd" id="1_v5yyk"]
 [ext_resource type="Texture2D" uid="uid://cwit5vn85r2k2" path="res://assets/Background.png" id="2_ok212"]
@@ -6,24 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://clewjsrdesvdf" path="res://assets/4by3 Box-8.png" id="4_vjqhd"]
 [ext_resource type="Texture2D" uid="uid://mrutuhacc25s" path="res://assets/Window Border-8.png" id="5_fg8os"]
 [ext_resource type="Texture2D" uid="uid://cb53jmfkybi45" path="res://assets/Art_Button.png" id="6_6bsx8"]
-[ext_resource type="AudioStream" uid="uid://3d15auetxl2p" path="res://assets/Hover_Sound.mp3" id="7_u1ytt"]
-[ext_resource type="AudioStream" uid="uid://uii5yb61vpif" path="res://assets/Click_Sound.mp3" id="8_q2uj8"]
 [ext_resource type="Texture2D" uid="uid://cpdabfxro0et5" path="res://assets/Side_Accent.png" id="9_ok212"]
+[ext_resource type="PackedScene" uid="uid://bgpd6kwrl6tnh" path="res://scenes/button.tscn" id="10_ifg48"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqdtw"]
 texture = ExtResource("2_ok212")
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t3k6r"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bpx0v"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e7mx1"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7v28d"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6828s"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eljt7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7fqi8"]
 
@@ -38,6 +25,20 @@ texture = ExtResource("2_ok212")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5xvns"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ku5u3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vjqhd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fg8os"]
+texture = ExtResource("3_ifg48")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6bsx8"]
+texture = ExtResource("3_ifg48")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u1ytt"]
+texture = ExtResource("3_ifg48")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q2uj8"]
+texture = ExtResource("3_ifg48")
 
 [node name="Task Menu" type="Control"]
 layout_mode = 3
@@ -56,25 +57,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_bqdtw")
-
-[node name="Home Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.892
-anchor_top = 0.421
-anchor_right = 0.892
-anchor_bottom = 0.421
-offset_left = -36.0
-offset_top = -36.0
-offset_right = 36.0
-offset_bottom = 36.0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_t3k6r")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_bpx0v")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_e7mx1")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_7v28d")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_6828s")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_eljt7")
-icon = ExtResource("3_ifg48")
 
 [node name="4By3Box-8" type="Sprite2D" parent="."]
 position = Vector2(250, 195)
@@ -104,14 +86,18 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_5xvns")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ku5u3")
 icon = ExtResource("6_6bsx8")
 
-[node name="HoverSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_u1ytt")
-
-[node name="ClickSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_q2uj8")
-
 [node name="SideAccent" type="Sprite2D" parent="."]
 position = Vector2(7, 721)
 texture = ExtResource("9_ok212")
 
-[connection signal="pressed" from="Home Button" to="." method="_on_home_button_pressed"]
+[node name="Home Button" parent="." instance=ExtResource("10_ifg48")]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 385.0
+offset_right = 483.0
+offset_bottom = 458.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vjqhd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_fg8os")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6bsx8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_u1ytt")
+theme_override_styles/normal = SubResource("StyleBoxTexture_q2uj8")

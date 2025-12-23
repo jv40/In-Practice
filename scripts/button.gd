@@ -17,11 +17,13 @@ func which_button():
 	
 	if button.text == "Load":
 		do_i_disable = true
-	elif button.text == "New Data":
+	elif button.text == "New_Data":
 		do_i_disable = true
 	elif button.text == "Settings":
 		do_i_disable = true
 	elif button.text == "Art":
+		do_i_disable = true
+	elif button.text == "Home":
 		do_i_disable = true
 
 func _on_pressed() -> void:

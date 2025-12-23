@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://cbdwfqqpxgtll"]
+[gd_scene load_steps=76 format=3 uid="uid://cbdwfqqpxgtll"]
 
 [ext_resource type="Script" uid="uid://scn7flgfyhof" path="res://scripts/home_menu.gd" id="1_nibv0"]
 [ext_resource type="Texture2D" uid="uid://cwit5vn85r2k2" path="res://assets/Background.png" id="2_hvx0t"]
@@ -167,6 +167,20 @@ texture = ExtResource("6_yc4qc")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y3dyl"]
 texture = ExtResource("6_yc4qc")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0k336"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1r5uv"]
+texture = ExtResource("3_0k336")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_krlag"]
+texture = ExtResource("3_0k336")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_md5xt"]
+texture = ExtResource("3_0k336")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vaio3"]
+texture = ExtResource("3_0k336")
+
 [node name="HomeMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -186,6 +200,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_w7cjy")
 
 [node name="Home Button" type="Button" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.892
@@ -352,7 +367,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_yc4qc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_nwib3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ogu25")
 theme_override_styles/normal = SubResource("StyleBoxTexture_86nr7")
-text = "New Data"
+text = "New_Data"
 
 [node name="Settings But" parent="." instance=ExtResource("18_hvx0t")]
 layout_mode = 0
@@ -379,6 +394,19 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_d3jxw")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_tjbjj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_y3dyl")
 text = "Art"
+
+[node name="Button" parent="." instance=ExtResource("18_hvx0t")]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 385.0
+offset_right = 483.0
+offset_bottom = 458.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0k336")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_1r5uv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_krlag")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_md5xt")
+theme_override_styles/normal = SubResource("StyleBoxTexture_vaio3")
+text = "Home"
 
 [connection signal="pressed" from="Home Button" to="." method="_on_home_button_pressed"]
 [connection signal="pressed" from="Art Button" to="." method="_on_art_button_pressed"]
