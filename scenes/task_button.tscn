@@ -1,14 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2xsa7s3r5fsm"]
+[gd_scene load_steps=14 format=3 uid="uid://b2xsa7s3r5fsm"]
 
 [ext_resource type="Texture2D" uid="uid://cjp7aa2i48sb3" path="res://assets/Completed Task Bar-8.png" id="1_sr8u0"]
 [ext_resource type="Texture2D" uid="uid://siebjw4j1gge" path="res://assets/Current Task Bar-8.png" id="2_6jlle"]
+[ext_resource type="Script" uid="uid://0v46qbjv7si3" path="res://scripts/task_button.gd" id="3_6jlle"]
+[ext_resource type="FontFile" uid="uid://citfhlyfte667" path="res://assets/avenir-lt-pro/AvenirLTProMedium.otf" id="4_6k6gp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6k6gp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s2kif"]
 texture = ExtResource("1_sr8u0")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xbyoj"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xbyoj"]
+texture = ExtResource("2_6jlle")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hpvvb"]
 texture = ExtResource("1_sr8u0")
@@ -16,16 +19,57 @@ texture = ExtResource("1_sr8u0")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uw0nx"]
 texture = ExtResource("2_6jlle")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hpvvb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s2kif"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_6k6gp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xbyoj"]
+
 [node name="TaskButton" type="Button"]
 offset_right = 414.0
 offset_bottom = 37.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6k6gp")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_s2kif")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_xbyoj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xbyoj")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_hpvvb")
 theme_override_styles/normal = SubResource("StyleBoxTexture_uw0nx")
+button_mask = 3
+script = ExtResource("3_6jlle")
 
 [node name="CurrentTaskBar-8" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(208, 19)
 texture = ExtResource("2_6jlle")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 1.0
+offset_right = 414.0
+offset_bottom = 40.0
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_6k6gp")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hpvvb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s2kif")
+placeholder_text = "insert task here|"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(35, 19)
+scale = Vector2(19.5, 19.5)
+texture = SubResource("CanvasTexture_6k6gp")
+
+[node name="CheckBox" type="CheckBox" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 7.0
+offset_right = 47.0
+offset_bottom = 31.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xbyoj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

@@ -19,6 +19,7 @@ func which_button():
 		do_i_disable = true
 	elif button.text == "New_Data":
 		do_i_disable = true
+		get_tree().change_scene_to_file("res://scenes/task_menu.tscn")
 	elif button.text == "Settings":
 		do_i_disable = true
 	elif button.text == "Art":

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c6sv8u6knr06"]
+[gd_scene load_steps=23 format=3 uid="uid://c6sv8u6knr06"]
 
 [ext_resource type="Script" uid="uid://bbvissij3hrsd" path="res://scripts/task_menu.gd" id="1_v5yyk"]
 [ext_resource type="Texture2D" uid="uid://cwit5vn85r2k2" path="res://assets/Background.png" id="2_ok212"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://clewjsrdesvdf" path="res://assets/4by3 Box-8.png" id="4_vjqhd"]
 [ext_resource type="Texture2D" uid="uid://mrutuhacc25s" path="res://assets/Window Border-8.png" id="5_fg8os"]
 [ext_resource type="Texture2D" uid="uid://cb53jmfkybi45" path="res://assets/Art_Button.png" id="6_6bsx8"]
+[ext_resource type="PackedScene" uid="uid://b2xsa7s3r5fsm" path="res://scenes/task_button.tscn" id="9_ifg48"]
 [ext_resource type="Texture2D" uid="uid://cpdabfxro0et5" path="res://assets/Side_Accent.png" id="9_ok212"]
 [ext_resource type="PackedScene" uid="uid://bgpd6kwrl6tnh" path="res://scenes/button.tscn" id="10_ifg48"]
 
@@ -101,3 +102,10 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_fg8os")
 theme_override_styles/hover = SubResource("StyleBoxTexture_6bsx8")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_u1ytt")
 theme_override_styles/normal = SubResource("StyleBoxTexture_q2uj8")
+
+[node name="TaskButton" parent="." instance=ExtResource("9_ifg48")]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 558.0
+offset_right = 475.0
+offset_bottom = 595.0
