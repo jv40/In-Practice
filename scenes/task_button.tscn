@@ -1,0 +1,31 @@
+[gd_scene load_steps=8 format=3 uid="uid://b2xsa7s3r5fsm"]
+
+[ext_resource type="Texture2D" uid="uid://cjp7aa2i48sb3" path="res://assets/Completed Task Bar-8.png" id="1_sr8u0"]
+[ext_resource type="Texture2D" uid="uid://siebjw4j1gge" path="res://assets/Current Task Bar-8.png" id="2_6jlle"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6k6gp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s2kif"]
+texture = ExtResource("1_sr8u0")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xbyoj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hpvvb"]
+texture = ExtResource("1_sr8u0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uw0nx"]
+texture = ExtResource("2_6jlle")
+
+[node name="TaskButton" type="Button"]
+offset_right = 414.0
+offset_bottom = 37.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6k6gp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_s2kif")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xbyoj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hpvvb")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uw0nx")
+
+[node name="CurrentTaskBar-8" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(208, 19)
+texture = ExtResource("2_6jlle")
