@@ -339,6 +339,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_hvx0t")
 theme_override_styles/hover = SubResource("StyleBoxTexture_e8hk2")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_u2ahj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0k336")
+text = "Load"
 
 [node name="New Data But" parent="." instance=ExtResource("18_hvx0t")]
 layout_mode = 0
@@ -351,6 +352,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_yc4qc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_nwib3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ogu25")
 theme_override_styles/normal = SubResource("StyleBoxTexture_86nr7")
+text = "New Data"
 
 [node name="Settings But" parent="." instance=ExtResource("18_hvx0t")]
 layout_mode = 0
@@ -363,6 +365,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_5l6jb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_653sy")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_15j8l")
 theme_override_styles/normal = SubResource("StyleBoxTexture_pe3pj")
+text = "Settings"
 
 [node name="Art But" parent="." instance=ExtResource("18_hvx0t")]
 layout_mode = 0
@@ -375,6 +378,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_m56bf")
 theme_override_styles/hover = SubResource("StyleBoxTexture_d3jxw")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_tjbjj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_y3dyl")
+text = "Art"
 
 [connection signal="pressed" from="Home Button" to="." method="_on_home_button_pressed"]
 [connection signal="pressed" from="Art Button" to="." method="_on_art_button_pressed"]
