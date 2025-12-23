@@ -1,25 +1,26 @@
-[gd_scene load_steps=53 format=3 uid="uid://cbdwfqqpxgtll"]
+[gd_scene load_steps=59 format=3 uid="uid://cbdwfqqpxgtll"]
 
-[ext_resource type="Script" uid="uid://scn7flgfyhof" path="res://home_menu.gd" id="1_152mr"]
-[ext_resource type="Texture2D" uid="uid://cwit5vn85r2k2" path="res://assets/Background.png" id="1_tel8n"]
-[ext_resource type="Texture2D" uid="uid://dp0l3ngqm6f0g" path="res://assets/Asset 12-8.png" id="2_us6cs"]
-[ext_resource type="Texture2D" uid="uid://clewjsrdesvdf" path="res://assets/4by3 Box-8.png" id="3_vhucb"]
-[ext_resource type="Texture2D" uid="uid://mrutuhacc25s" path="res://assets/Window Border-8.png" id="4_xrfiu"]
-[ext_resource type="Texture2D" uid="uid://cb53jmfkybi45" path="res://assets/Art_Button.png" id="5_xrfiu"]
-[ext_resource type="Texture2D" uid="uid://di1aer11msp17" path="res://assets/Load.png" id="6_jtcve"]
-[ext_resource type="Texture2D" uid="uid://cnxnnq58rffle" path="res://assets/Load_Selected.png" id="6_y62du"]
-[ext_resource type="Texture2D" uid="uid://cmiwype45wvro" path="res://assets/New_Data.png" id="7_idxy1"]
-[ext_resource type="Texture2D" uid="uid://cpdabfxro0et5" path="res://assets/Side_Accent.png" id="7_x6rhn"]
-[ext_resource type="Texture2D" uid="uid://rjscqvsfjmrn" path="res://assets/Settings.png" id="8_i38ex"]
-[ext_resource type="Texture2D" uid="uid://dc74wy71mprvt" path="res://assets/Title.png" id="10_p6a23"]
-[ext_resource type="Texture2D" uid="uid://c86yxoqvtayt1" path="res://assets/New_Data_Selected.png" id="13_8mqvm"]
-[ext_resource type="Texture2D" uid="uid://coea7i7t7xc8y" path="res://assets/Settings_Selected.png" id="14_5rhw2"]
-[ext_resource type="AudioStream" uid="uid://3d15auetxl2p" path="res://assets/Hover_Sound.mp3" id="15_8mqvm"]
-[ext_resource type="AudioStream" uid="uid://cqb1ee6ycrevp" path="res://assets/Press_Sound.mp3" id="16_5rhw2"]
-[ext_resource type="AudioStream" uid="uid://uii5yb61vpif" path="res://assets/Click_Sound.mp3" id="17_w7cjy"]
+[ext_resource type="Script" uid="uid://scn7flgfyhof" path="res://scripts/home_menu.gd" id="1_nibv0"]
+[ext_resource type="Texture2D" uid="uid://cwit5vn85r2k2" path="res://assets/Background.png" id="2_hvx0t"]
+[ext_resource type="Texture2D" uid="uid://dp0l3ngqm6f0g" path="res://assets/Asset 12-8.png" id="3_0k336"]
+[ext_resource type="Texture2D" uid="uid://clewjsrdesvdf" path="res://assets/4by3 Box-8.png" id="4_e8hk2"]
+[ext_resource type="Texture2D" uid="uid://mrutuhacc25s" path="res://assets/Window Border-8.png" id="5_u2ahj"]
+[ext_resource type="Texture2D" uid="uid://cb53jmfkybi45" path="res://assets/Art_Button.png" id="6_yc4qc"]
+[ext_resource type="Texture2D" uid="uid://di1aer11msp17" path="res://assets/Load.png" id="7_nwib3"]
+[ext_resource type="Texture2D" uid="uid://cmiwype45wvro" path="res://assets/New_Data.png" id="8_ogu25"]
+[ext_resource type="Texture2D" uid="uid://rjscqvsfjmrn" path="res://assets/Settings.png" id="9_86nr7"]
+[ext_resource type="Texture2D" uid="uid://cpdabfxro0et5" path="res://assets/Side_Accent.png" id="10_5l6jb"]
+[ext_resource type="Texture2D" uid="uid://dc74wy71mprvt" path="res://assets/Title.png" id="11_653sy"]
+[ext_resource type="Texture2D" uid="uid://cnxnnq58rffle" path="res://assets/Load_Selected.png" id="12_15j8l"]
+[ext_resource type="Texture2D" uid="uid://c86yxoqvtayt1" path="res://assets/New_Data_Selected.png" id="13_pe3pj"]
+[ext_resource type="Texture2D" uid="uid://coea7i7t7xc8y" path="res://assets/Settings_Selected.png" id="14_m56bf"]
+[ext_resource type="AudioStream" uid="uid://3d15auetxl2p" path="res://assets/Hover_Sound.mp3" id="15_d3jxw"]
+[ext_resource type="AudioStream" uid="uid://cqb1ee6ycrevp" path="res://assets/Press_Sound.mp3" id="16_tjbjj"]
+[ext_resource type="AudioStream" uid="uid://uii5yb61vpif" path="res://assets/Click_Sound.mp3" id="17_y3dyl"]
+[ext_resource type="PackedScene" uid="uid://bgpd6kwrl6tnh" path="res://scenes/button.tscn" id="18_hvx0t"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w7cjy"]
-texture = ExtResource("1_tel8n")
+texture = ExtResource("2_hvx0t")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v1sb5"]
 
@@ -89,6 +90,29 @@ texture = ExtResource("1_tel8n")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8mqvm"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hvx0t"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hvx0t"]
+texture = ExtResource("12_15j8l")
+expand_margin_left = 80.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e8hk2"]
+texture = ExtResource("12_15j8l")
+expand_margin_left = 80.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u2ahj"]
+texture = ExtResource("12_15j8l")
+expand_margin_left = 80.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0k336"]
+texture = ExtResource("7_nwib3")
+
 [node name="HomeMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -96,7 +120,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_152mr")
+script = ExtResource("1_nibv0")
 
 [node name="Background Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -124,15 +148,15 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kh18g")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_jau1s")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_qrkh4")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_y62du")
-icon = ExtResource("2_us6cs")
+icon = ExtResource("3_0k336")
 
 [node name="4By3Box-8" type="Sprite2D" parent="."]
 position = Vector2(250, 195)
-texture = ExtResource("3_vhucb")
+texture = ExtResource("4_e8hk2")
 
 [node name="WindowBorder-8" type="Sprite2D" parent="."]
 position = Vector2(250, 195)
-texture = ExtResource("4_xrfiu")
+texture = ExtResource("5_u2ahj")
 
 [node name="Art Button" type="Button" parent="."]
 layout_mode = 1
@@ -152,7 +176,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_jtcve")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_sk3yd")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_8s1cg")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_idxy1")
-icon = ExtResource("5_xrfiu")
+icon = ExtResource("6_yc4qc")
 
 [node name="Load Button" type="Button" parent="."]
 layout_mode = 1
@@ -172,7 +196,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_5rhw2")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_arq2b")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_c8bky")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_p6a23")
-icon = ExtResource("6_jtcve")
+icon = ExtResource("7_nwib3")
 
 [node name="New Data Button" type="Button" parent="."]
 layout_mode = 1
@@ -192,7 +216,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_w7cjy")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_2dnoa")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_2lh81")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_152mr")
-icon = ExtResource("7_idxy1")
+icon = ExtResource("8_ogu25")
 
 [node name="Settings Button" type="Button" parent="."]
 layout_mode = 1
@@ -212,39 +236,51 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_msmrx")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ts40c")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_yb18d")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_8mqvm")
-icon = ExtResource("8_i38ex")
+icon = ExtResource("9_86nr7")
 
 [node name="SideAccent" type="Sprite2D" parent="."]
 position = Vector2(7, 721)
-texture = ExtResource("7_x6rhn")
+texture = ExtResource("10_5l6jb")
 
 [node name="Title" type="Sprite2D" parent="."]
 position = Vector2(349, 599)
-texture = ExtResource("10_p6a23")
+texture = ExtResource("11_653sy")
 
 [node name="LoadSelected" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(397, 763)
-texture = ExtResource("6_y62du")
+texture = ExtResource("12_15j8l")
 
 [node name="NewDataSelected" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(340, 845)
-texture = ExtResource("13_8mqvm")
+texture = ExtResource("13_pe3pj")
 
 [node name="SettingsSelected" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(360, 929)
-texture = ExtResource("14_5rhw2")
+texture = ExtResource("14_m56bf")
 
 [node name="HoverSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("15_8mqvm")
+stream = ExtResource("15_d3jxw")
 
 [node name="PressSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("16_5rhw2")
+stream = ExtResource("16_tjbjj")
 
 [node name="ClickSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("17_w7cjy")
+stream = ExtResource("17_y3dyl")
+
+[node name="Button" parent="." instance=ExtResource("18_hvx0t")]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 656.0
+offset_right = 238.0
+offset_bottom = 719.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hvx0t")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_hvx0t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_e8hk2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_u2ahj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0k336")
 
 [connection signal="pressed" from="Home Button" to="." method="_on_home_button_pressed"]
 [connection signal="pressed" from="Art Button" to="." method="_on_art_button_pressed"]
