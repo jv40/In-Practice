@@ -19,7 +19,6 @@ func which_button():
 		do_i_disable = true
 	elif button.text == "New_Data":
 		do_i_disable = true
-		get_tree().change_scene_to_file("res://scenes/task_menu.tscn")
 	elif button.text == "Settings":
 		do_i_disable = true
 	elif button.text == "Art":
@@ -27,8 +26,15 @@ func which_button():
 	elif button.text == "Home":
 		do_i_disable = true
 
+func change_scene(nextScene):
+	if nextScene == "New_Data":
+		get_tree().change_scene_to_file("res://scenes/task_menu.tscn")
+	elif nextScene == "Home":
+		get_tree().change_scene_to_file("res://scenes/home_menu.tscn")
+
 func _on_pressed() -> void:
 	animation_player.play("press")
+	change_scene(button.text)
 
 func _on_mouse_entered() -> void:
 	print ("mouse enter")

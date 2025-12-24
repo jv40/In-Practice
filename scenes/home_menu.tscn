@@ -395,7 +395,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_tjbjj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_y3dyl")
 text = "Art"
 
-[node name="Button" parent="." instance=ExtResource("18_hvx0t")]
+[node name="Home But" parent="." instance=ExtResource("18_hvx0t")]
 layout_mode = 0
 offset_left = 410.0
 offset_top = 385.0
