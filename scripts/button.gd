@@ -13,6 +13,9 @@ func _ready() -> void:
 	animation_player.play("disable_font")
 	
 
+func _process(delta: float) -> void:
+	pass
+
 func which_button():
 	
 	if button.text == "Load":
@@ -29,12 +32,18 @@ func which_button():
 func change_scene(nextScene):
 	if nextScene == "New_Data":
 		get_tree().change_scene_to_file("res://scenes/task_menu.tscn")
+	
+	elif nextScene == "Home" && get_tree().current_scene.scene_file_path == "res://scenes/home_menu.tscn":
+		pass
+		
 	elif nextScene == "Home":
 		get_tree().change_scene_to_file("res://scenes/home_menu.tscn")
 
 func _on_pressed() -> void:
 	animation_player.play("press")
+	print (button.text)
 	change_scene(button.text)
+	animation_player.play("disable_font")
 
 func _on_mouse_entered() -> void:
 	print ("mouse enter")

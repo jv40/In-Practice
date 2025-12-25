@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://b2xsa7s3r5fsm"]
 
 [ext_resource type="Texture2D" uid="uid://cjp7aa2i48sb3" path="res://assets/Completed Task Bar-8.png" id="1_sr8u0"]
-[ext_resource type="Texture2D" uid="uid://siebjw4j1gge" path="res://assets/Current Task Bar-8.png" id="2_6jlle"]
+[ext_resource type="Texture2D" uid="uid://mt4sinja04bp" path="res://assets/Current Task Bar-8.png" id="2_6jlle"]
 [ext_resource type="Script" uid="uid://0v46qbjv7si3" path="res://scripts/task_button.gd" id="3_6jlle"]
 [ext_resource type="FontFile" uid="uid://citfhlyfte667" path="res://assets/avenir-lt-pro/AvenirLTProMedium.otf" id="4_6k6gp"]
 

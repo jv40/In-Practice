@@ -85,6 +85,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_1g8fj")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_vyqm4")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_5xvns")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ku5u3")
+text = "Art"
 icon = ExtResource("6_6bsx8")
 
 [node name="SideAccent" type="Sprite2D" parent="."]
@@ -102,6 +103,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_fg8os")
 theme_override_styles/hover = SubResource("StyleBoxTexture_6bsx8")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_u1ytt")
 theme_override_styles/normal = SubResource("StyleBoxTexture_q2uj8")
+text = "Home"
 
 [node name="TaskButton" parent="." instance=ExtResource("9_ifg48")]
 layout_mode = 0
