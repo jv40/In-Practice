@@ -4,17 +4,19 @@ extends Button
 
 @onready var button: Button = $"."
 
+
+
 # Do you disable the font or not
 # Yes = true, No = false
 var do_i_disable: bool = false
 
 func _ready() -> void:
 	which_button()
-	animation_player.play("disable_font")
+	disable_font_func()
 	
 
-func _process(delta: float) -> void:
-	pass
+func disable_font_func() -> void:
+	animation_player.play("disable_font")
 
 func which_button():
 	
@@ -28,6 +30,8 @@ func which_button():
 		do_i_disable = true
 	elif button.text == "Home":
 		do_i_disable = true
+	else:
+		pass
 
 func change_scene(nextScene):
 	if nextScene == "New_Data":
@@ -46,9 +50,19 @@ func _on_pressed() -> void:
 	animation_player.play("disable_font")
 
 func _on_mouse_entered() -> void:
-	print ("mouse enter")
 	animation_player.play("hover")
 
 #func _on_mouse_exited() -> void:
 	#print ("mouse exit")
 	#animation_player.pause()
+
+
+#func _on_tree_exiting() -> void:
+	#disable_font_func()
+	#
+
+
+
+#func _on_child_entered_tree(node: Node) -> void:
+	#which_button()
+	#disable_font_func()
