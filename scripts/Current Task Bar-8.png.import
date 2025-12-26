@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://siebjw4j1gge"
-path="res://.godot/imported/Current Task Bar-8.png-3777518bfa44eb40e81e2723e4f4ba9c.ctex"
+uid="uid://mt4sinja04bp"
+path="res://.godot/imported/Current Task Bar-8.png-94ad786754211baf2cd56d6b26594f82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Current Task Bar-8.png"
-dest_files=["res://.godot/imported/Current Task Bar-8.png-3777518bfa44eb40e81e2723e4f4ba9c.ctex"]
+source_file="res://scripts/Current Task Bar-8.png"
+dest_files=["res://.godot/imported/Current Task Bar-8.png-94ad786754211baf2cd56d6b26594f82.ctex"]
 
 [params]
 

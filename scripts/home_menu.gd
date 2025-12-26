@@ -10,11 +10,6 @@ func _ready():
 func _process(delta):
 	pass
 
-#const BUTTON = preload("res://scenes/button.tscn")
-
-#var buttonScene = get_tree().current_scene.get_node("")
-
-#@onready var home_but: Button = $"Home But"
 
 #I'm hard coding the hover functionality, not very good
 #to do I'll be honest but it works for now
@@ -65,8 +60,3 @@ func _on_new_data_pressed() -> void:
 
 func _on_settings_pressed() -> void:
 	$ClickSFX.play();
-
-
-#func _on_child_entered_tree(node: Node) -> void:
-	#BUTTON.disable_font_func()
-	
