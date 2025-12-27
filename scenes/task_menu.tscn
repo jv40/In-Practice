@@ -102,11 +102,10 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_fg8os")
 theme_override_styles/hover = SubResource("StyleBoxTexture_6bsx8")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_u1ytt")
 theme_override_styles/normal = SubResource("StyleBoxTexture_q2uj8")
-text = "Home"
 
 [node name="TaskButton" parent="." instance=ExtResource("9_ifg48")]
 layout_mode = 0
-offset_left = 61.0
-offset_top = 558.0
-offset_right = 475.0
-offset_bottom = 595.0
+offset_left = 58.0
+offset_top = 651.0
+offset_right = 472.0
+offset_bottom = 688.0

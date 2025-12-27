@@ -61,19 +61,3 @@ func _on_new_data_pressed() -> void:
 
 func _on_settings_pressed() -> void:
 	$ClickSFX.play();
-
-
-
-func _on_home_but_tree_entered() -> void:
-	update_buttons()
-	
-	pass # Replace with function body.
-
-func update_buttons():
-	#var buttons = get_tree().get_nodes_in_group("menu_buttons")
-	for child in get_children():
-		if child is Button and child.has_method("disable_font_func") and child.text != "":
-			print("Calling disable_font_func on: ", child.text)
-			child.disable_font_func()
-		#if button.has_method("disable_font_func"):
-			#button.disable_font_func()
