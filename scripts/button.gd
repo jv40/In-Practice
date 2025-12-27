@@ -58,6 +58,7 @@ func which_button():
 		do_i_disable = true
 	elif original_text == "Home":
 		print ("Home Button Disabling")
+		print ("--------------------------------------")
 		do_i_disable = true
 
 func change_scene(nextScene):
