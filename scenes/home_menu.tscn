@@ -420,3 +420,4 @@ text = "Home"
 [connection signal="mouse_exited" from="Settings Button" to="." method="_on_settings_unhovered"]
 [connection signal="pressed" from="Settings Button" to="." method="_on_settings_pressed"]
 [connection signal="hidden" from="LoadSelected" to="." method="_on_load_selected_hidden"]
+[connection signal="tree_entered" from="Home But" to="." method="_on_home_but_tree_entered"]
