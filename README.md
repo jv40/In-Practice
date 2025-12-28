@@ -13,10 +13,11 @@ easier for me and for anyone else interested.
 - Add Task feature on Task page
 - Art Selection page and feature
 - Load Data button keeps previous tasks saved upon reloading?
+- Settings page and button
 
 ## Next Up
-*Timer for Task Page*
-*Add Task feature on Task Page*
+- *Timer for Task Page*
+- *Add Task feature on Task Page*
 
 ## Bugs
 *None currently*
