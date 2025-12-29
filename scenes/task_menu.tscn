@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c6sv8u6knr06"]
+[gd_scene load_steps=22 format=3 uid="uid://c6sv8u6knr06"]
 
 [ext_resource type="Script" uid="uid://bbvissij3hrsd" path="res://scripts/task_menu.gd" id="1_v5yyk"]
 [ext_resource type="Texture2D" uid="uid://cwit5vn85r2k2" path="res://assets/Background.png" id="2_ok212"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b2xsa7s3r5fsm" path="res://scenes/task_button.tscn" id="9_ifg48"]
 [ext_resource type="Texture2D" uid="uid://cpdabfxro0et5" path="res://assets/Side_Accent.png" id="9_ok212"]
 [ext_resource type="PackedScene" uid="uid://bgpd6kwrl6tnh" path="res://scenes/button.tscn" id="10_ifg48"]
+[ext_resource type="PackedScene" uid="uid://baqaqi68m6jtl" path="res://scenes/countdown_timer.tscn" id="10_vjqhd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqdtw"]
 texture = ExtResource("2_ok212")
@@ -92,10 +93,10 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_q2uj8")
 
 [node name="TaskButton" parent="." instance=ExtResource("9_ifg48")]
 layout_mode = 0
-offset_left = 58.0
-offset_top = 651.0
-offset_right = 472.0
-offset_bottom = 688.0
+offset_left = 57.0
+offset_top = 683.0
+offset_right = 471.0
+offset_bottom = 720.0
 
 [node name="Art Button" parent="." instance=ExtResource("10_ifg48")]
 layout_mode = 0
@@ -108,3 +109,10 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ifg48")
 theme_override_styles/hover = SubResource("StyleBoxTexture_vjqhd")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2topk")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ok212")
+
+[node name="Countdown Timer" parent="." instance=ExtResource("10_vjqhd")]
+layout_mode = 1
+offset_left = 85.0
+offset_top = 473.0
+offset_right = 91.0
+offset_bottom = 483.0
