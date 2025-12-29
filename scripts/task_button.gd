@@ -9,10 +9,15 @@ extends Button
 #
 		#if event.pressed and event.button_index == "mouse_right_click":
 			#print("Right!")
+@onready var task_button: Button = $"."
 
 @onready var check_box: CheckBox = $CheckBox
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var line_edit: LineEdit = $LineEdit
+@onready var current_task_bar: Sprite2D = $"CurrentTaskBar-8"
+
+const CURRENT_TASK_BAR = preload("res://assets/Current Task Bar-8.png")
+const COMPLETED_TASK_BAR = preload("res://assets/Completed Task Bar-8.png")
 
 func is_task_done():
 	if check_box.button_pressed == true:
@@ -29,8 +34,11 @@ func is_task_done():
 func _process (delta: float) -> void:
 	if is_task_done() == true:
 		animation_player.play("completed")
+		task_button["theme_override_styles/normal"].Texture = COMPLETED_TASK_BAR
+		#current_task_bar.Texture = COMPLETED_TASK_BAR
 	else:
 		animation_player.play("RESET")
+		#current_task_bar.Texture = CURRENT_TASK_BAR
 		
 	if line_edit.placeholder_text == "" and line_edit.is_editing() == false:
 		line_edit.placeholder_text = "insert text here|"
