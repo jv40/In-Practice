@@ -26,6 +26,7 @@ func change_scene(nextScene):
 		get_tree().change_scene_to_file("res://scenes/home_menu.tscn")
 
 #=================== On Press ===================
+#PRE: Button must lead to another page upon press
 #POST: SFX plays and scene changes if appropriate
 func _on_pressed() -> void:
 	animation_player.play("press")
