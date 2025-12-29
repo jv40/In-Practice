@@ -89,6 +89,9 @@ texture = ExtResource("6_yc4qc")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d3jxw"]
 texture = ExtResource("6_yc4qc")
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tjbjj"]
 texture = ExtResource("6_yc4qc")
@@ -103,6 +106,10 @@ texture = ExtResource("3_0k336")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_krlag"]
 texture = ExtResource("3_0k336")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_md5xt"]
 texture = ExtResource("3_0k336")

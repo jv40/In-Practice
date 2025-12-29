@@ -1,0 +1,100 @@
+[gd_scene load_steps=20 format=3 uid="uid://cmpihwnimkam5"]
+
+[ext_resource type="Script" uid="uid://scn7flgfyhof" path="res://scripts/home_menu.gd" id="1_ic7dy"]
+[ext_resource type="Texture2D" uid="uid://cwit5vn85r2k2" path="res://assets/Background.png" id="2_5gfed"]
+[ext_resource type="Texture2D" uid="uid://clewjsrdesvdf" path="res://assets/4by3 Box-8.png" id="3_8hgdf"]
+[ext_resource type="Texture2D" uid="uid://mrutuhacc25s" path="res://assets/Window Border-8.png" id="4_lm8mo"]
+[ext_resource type="Texture2D" uid="uid://cpdabfxro0et5" path="res://assets/Side_Accent.png" id="5_8an65"]
+[ext_resource type="PackedScene" uid="uid://bgpd6kwrl6tnh" path="res://scenes/button.tscn" id="7_lib45"]
+[ext_resource type="Texture2D" uid="uid://cb53jmfkybi45" path="res://assets/Art_Button.png" id="14_orfrh"]
+[ext_resource type="Texture2D" uid="uid://dp0l3ngqm6f0g" path="res://assets/Asset 12-8.png" id="15_cy26f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w7cjy"]
+texture = ExtResource("2_5gfed")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hvx0t"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m56bf"]
+texture = ExtResource("14_orfrh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d3jxw"]
+texture = ExtResource("14_orfrh")
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tjbjj"]
+texture = ExtResource("14_orfrh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y3dyl"]
+texture = ExtResource("14_orfrh")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0k336"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1r5uv"]
+texture = ExtResource("15_cy26f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_krlag"]
+texture = ExtResource("15_cy26f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_md5xt"]
+texture = ExtResource("15_cy26f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vaio3"]
+texture = ExtResource("15_cy26f")
+
+[node name="HomeMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ic7dy")
+
+[node name="Background Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_w7cjy")
+
+[node name="4By3Box-8" type="Sprite2D" parent="."]
+position = Vector2(250, 195)
+texture = ExtResource("3_8hgdf")
+
+[node name="WindowBorder-8" type="Sprite2D" parent="."]
+position = Vector2(250, 195)
+texture = ExtResource("4_lm8mo")
+
+[node name="SideAccent" type="Sprite2D" parent="."]
+position = Vector2(7, 721)
+texture = ExtResource("5_8an65")
+
+[node name="Art But" parent="." instance=ExtResource("7_lib45")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 394.0
+offset_right = 142.0
+offset_bottom = 449.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hvx0t")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_m56bf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_d3jxw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tjbjj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_y3dyl")
+
+[node name="Home But" parent="." instance=ExtResource("7_lib45")]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 385.0
+offset_right = 483.0
+offset_bottom = 458.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0k336")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_1r5uv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_krlag")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_md5xt")
+theme_override_styles/normal = SubResource("StyleBoxTexture_vaio3")
+
+[connection signal="tree_entered" from="Home But" to="." method="_on_home_but_tree_entered"]
