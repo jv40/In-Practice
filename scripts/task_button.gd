@@ -12,6 +12,7 @@ extends Button
 
 @onready var check_box: CheckBox = $CheckBox
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var line_edit: LineEdit = $LineEdit
 
 func is_task_done():
 	if check_box.button_pressed == true:
@@ -30,3 +31,15 @@ func _process (delta: float) -> void:
 		animation_player.play("completed")
 	else:
 		animation_player.play("RESET")
+		
+	if line_edit.placeholder_text == "" and line_edit.is_editing() == false:
+		line_edit.placeholder_text = "insert text here|"
+
+
+
+func _on_pressed() -> void:
+	line_edit.placeholder_text = ""
+
+
+func _on_line_edit_editing_toggled(toggled_on: bool) -> void:
+	line_edit.placeholder_text = ""
