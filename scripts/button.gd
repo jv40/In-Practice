@@ -11,10 +11,9 @@ extends Button
 var do_i_disable: bool = false
 var original_text: String = ""
 
-func _ready() -> void:
-	pass
-
-
+#=================== Change Scene ===================
+#PRE: nextScene is assigned as a string
+#POST: Current scene in tree is switched to nextScene
 func change_scene(nextScene):
 	if nextScene == "New Data But":
 		await get_tree().create_timer(0.2).timeout
@@ -26,13 +25,13 @@ func change_scene(nextScene):
 		await get_tree().create_timer(0.2).timeout
 		get_tree().change_scene_to_file("res://scenes/home_menu.tscn")
 
+#=================== On Press ===================
+#POST: SFX plays and scene changes if appropriate
 func _on_pressed() -> void:
 	animation_player.play("press")
 	change_scene(name)
 
+#=================== On Mouse Entered ===================
+#POST: SFX plays
 func _on_mouse_entered() -> void:
 	animation_player.play("hover")
-
-#func _on_mouse_exited() -> void:
-	#print ("mouse exit")
-	#animation_player.pause()
