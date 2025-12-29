@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://baqaqi68m6jtl"]
+[gd_scene load_steps=13 format=3 uid="uid://baqaqi68m6jtl"]
 
 [ext_resource type="Script" uid="uid://llja2gdsfsai" path="res://countdown_timer.gd" id="1_d7c0i"]
 [ext_resource type="FontFile" uid="uid://bphknxb2h36rm" path="res://assets/avenir-lt-pro/AvenirLTProHeavy.otf" id="2_uwiiq"]
 [ext_resource type="Texture2D" uid="uid://cbceyaub3weon" path="res://assets/Start Button-8.png" id="3_ovyck"]
+[ext_resource type="Texture2D" uid="uid://by2fc08n6sepe" path="res://assets/Stop Button-8.png" id="4_ovyck"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6cqgj"]
 
@@ -15,6 +16,17 @@ texture = ExtResource("3_ovyck")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q2urv"]
 texture = ExtResource("3_ovyck")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q2urv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i01vx"]
+texture = ExtResource("4_ovyck")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x3581"]
+texture = ExtResource("4_ovyck")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qx6vi"]
+texture = ExtResource("4_ovyck")
+
 [node name="Countdown Timer" type="Control"]
 layout_mode = 3
 anchor_right = 0.708
@@ -25,7 +37,6 @@ grow_vertical = 2
 script = ExtResource("1_d7c0i")
 
 [node name="Timer" type="Timer" parent="."]
-autostart = true
 
 [node name="Minutes Label" type="Label" parent="."]
 layout_mode = 0
@@ -49,14 +60,26 @@ text = "00"
 
 [node name="Timer Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 29.0
-offset_top = 119.0
-offset_right = 316.0
-offset_bottom = 182.0
+offset_left = 26.0
+offset_top = 120.0
+offset_right = 313.0
+offset_bottom = 183.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6cqgj")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_uwiiq")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ovyck")
 theme_override_styles/normal = SubResource("StyleBoxTexture_q2urv")
 
+[node name="Reset Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 130.0
+offset_right = 368.0
+offset_bottom = 172.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q2urv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_i01vx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x3581")
+theme_override_styles/normal = SubResource("StyleBoxTexture_qx6vi")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Timer Button" to="." method="_on_timer_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="." method="_on_reset_button_pressed"]

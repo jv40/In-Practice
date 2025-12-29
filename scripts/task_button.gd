@@ -14,7 +14,7 @@ extends Button
 @onready var check_box: CheckBox = $CheckBox
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var line_edit: LineEdit = $LineEdit
-@onready var current_task_bar: Sprite2D = $"CurrentTaskBar-8"
+#@onready var current_task_bar: Sprite2D = $"CurrentTaskBar-8"
 
 const CURRENT_TASK_BAR = preload("res://assets/Current Task Bar-8.png")
 const COMPLETED_TASK_BAR = preload("res://assets/Completed Task Bar-8.png")
