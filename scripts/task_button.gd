@@ -34,20 +34,18 @@ func is_task_done():
 func _process (delta: float) -> void:
 	if is_task_done() == true:
 		animation_player.play("completed")
-		task_button["theme_override_styles/normal"].Texture = COMPLETED_TASK_BAR
-		#current_task_bar.Texture = COMPLETED_TASK_BAR
+		var style = task_button.get_theme_stylebox("normal")
+		if style is StyleBoxTexture:
+			style.texture = COMPLETED_TASK_BAR
+
 	else:
 		animation_player.play("RESET")
+		var style = task_button.get_theme_stylebox("normal")
+		
+		#Checking to make sure we're accessing a StyleBoxTexture
+		if style is StyleBoxTexture:
+			style.texture = CURRENT_TASK_BAR
 		#current_task_bar.Texture = CURRENT_TASK_BAR
 		
 	if line_edit.placeholder_text == "" and line_edit.is_editing() == false:
 		line_edit.placeholder_text = "insert text here|"
-
-
-
-func _on_pressed() -> void:
-	line_edit.placeholder_text = ""
-
-
-func _on_line_edit_editing_toggled(toggled_on: bool) -> void:
-	line_edit.placeholder_text = ""
