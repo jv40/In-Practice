@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://baqaqi68m6jtl"]
+[gd_scene load_steps=29 format=3 uid="uid://baqaqi68m6jtl"]
 
 [ext_resource type="Script" uid="uid://llja2gdsfsai" path="res://countdown_timer.gd" id="1_d7c0i"]
 [ext_resource type="FontFile" uid="uid://bphknxb2h36rm" path="res://assets/avenir-lt-pro/AvenirLTProHeavy.otf" id="2_uwiiq"]
 [ext_resource type="Texture2D" uid="uid://cbceyaub3weon" path="res://assets/Start Button-8.png" id="3_ovyck"]
 [ext_resource type="Texture2D" uid="uid://by2fc08n6sepe" path="res://assets/Stop Button-8.png" id="4_ovyck"]
+[ext_resource type="PackedScene" uid="uid://bgpd6kwrl6tnh" path="res://scenes/button.tscn" id="5_6cqgj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6cqgj"]
 
@@ -11,6 +12,9 @@
 texture = ExtResource("3_ovyck")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ovyck"]
+texture = ExtResource("3_ovyck")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2e6q0"]
 texture = ExtResource("3_ovyck")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q2urv"]
@@ -23,15 +27,114 @@ texture = ExtResource("4_ovyck")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x3581"]
 texture = ExtResource("4_ovyck")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6cqgj"]
+texture = ExtResource("4_ovyck")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qx6vi"]
 texture = ExtResource("4_ovyck")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i01vx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s4kcv"]
+texture = ExtResource("3_ovyck")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n3bnx"]
+texture = ExtResource("3_ovyck")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c3itq"]
+texture = ExtResource("3_ovyck")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nvppl"]
+texture = ExtResource("3_ovyck")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4jb5f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qj1kh"]
+texture = ExtResource("4_ovyck")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ngh7f"]
+texture = ExtResource("4_ovyck")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_exk4i"]
+texture = ExtResource("4_ovyck")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7x64p"]
+texture = ExtResource("4_ovyck")
+
+[sub_resource type="Animation" id="Animation_q2urv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Timer Button:theme_override_styles/normal:expand_margin_bottom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Timer Button:theme_override_styles/normal:expand_margin_top")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_6cqgj"]
+resource_name = "paused_button"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("Timer Button:theme_override_styles/normal:expand_margin_bottom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [20.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("Timer Button:theme_override_styles/normal:expand_margin_top")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i01vx"]
+_data = {
+&"RESET": SubResource("Animation_q2urv"),
+&"paused_button": SubResource("Animation_6cqgj")
+}
 
 [node name="Countdown Timer" type="Control"]
 layout_mode = 3
 anchor_right = 0.708
 anchor_bottom = 0.189
-offset_bottom = -1.52588e-05
+offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_d7c0i")
@@ -58,28 +161,63 @@ theme_override_fonts/font = ExtResource("2_uwiiq")
 theme_override_font_sizes/font_size = 128
 text = "00"
 
-[node name="Timer Button" type="Button" parent="."]
+[node name="Timer But" type="Button" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 26.0
+offset_left = 9.0
 offset_top = 120.0
-offset_right = 313.0
+offset_right = 296.0
 offset_bottom = 183.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6cqgj")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_uwiiq")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ovyck")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2e6q0")
 theme_override_styles/normal = SubResource("StyleBoxTexture_q2urv")
 
-[node name="Reset Button" type="Button" parent="."]
+[node name="Reset But" type="Button" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 326.0
+offset_left = 307.0
 offset_top = 130.0
-offset_right = 368.0
+offset_right = 349.0
 offset_bottom = 172.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_q2urv")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_i01vx")
 theme_override_styles/hover = SubResource("StyleBoxTexture_x3581")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6cqgj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_qx6vi")
 
+[node name="Timer Button" parent="." instance=ExtResource("5_6cqgj")]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 120.0
+offset_right = 296.0
+offset_bottom = 183.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i01vx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_s4kcv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_n3bnx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_c3itq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_nvppl")
+
+[node name="Reset Button" parent="." instance=ExtResource("5_6cqgj")]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 131.0
+offset_right = 348.0
+offset_bottom = 172.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4jb5f")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_qj1kh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ngh7f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_exk4i")
+theme_override_styles/normal = SubResource("StyleBoxTexture_7x64p")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_i01vx")
+}
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Timer But" to="." method="_on_timer_button_pressed"]
+[connection signal="pressed" from="Reset But" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="Timer Button" to="." method="_on_timer_button_pressed"]
 [connection signal="pressed" from="Reset Button" to="." method="_on_reset_button_pressed"]
