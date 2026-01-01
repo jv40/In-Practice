@@ -1,8 +1,9 @@
 extends Button
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-
+const TASK_BUTTON = preload("res://scenes/task_button.tscn")
 @onready var button: Button = $"."
+@onready var tasks: VBoxContainer = $"../Tasks"
 
 #@onready var parent = get_parent()
 
@@ -31,6 +32,11 @@ func change_scene(nextScene):
 func _on_pressed() -> void:
 	animation_player.play("press")
 	change_scene(name)
+	if button.name == "Add Task Button":
+		print ("Add task started")
+		var new_task_button = TASK_BUTTON.instantiate()
+		#tasks.add_child(new_task_button)
+		add_child(new_task_button)
 
 #=================== On Mouse Entered ===================
 #POST: SFX plays

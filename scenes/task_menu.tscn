@@ -1,6 +1,5 @@
-[gd_scene load_steps=27 format=3 uid="uid://c6sv8u6knr06"]
+[gd_scene load_steps=26 format=3 uid="uid://c6sv8u6knr06"]
 
-[ext_resource type="Script" uid="uid://bbvissij3hrsd" path="res://scripts/task_menu.gd" id="1_v5yyk"]
 [ext_resource type="Texture2D" uid="uid://cwit5vn85r2k2" path="res://assets/Background.png" id="2_ok212"]
 [ext_resource type="Texture2D" uid="uid://dp0l3ngqm6f0g" path="res://assets/Asset 12-8.png" id="3_ifg48"]
 [ext_resource type="Texture2D" uid="uid://clewjsrdesvdf" path="res://assets/4by3 Box-8.png" id="4_vjqhd"]
@@ -68,7 +67,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_v5yyk")
 
 [node name="Background Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -102,13 +100,6 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_fg8os")
 theme_override_styles/hover = SubResource("StyleBoxTexture_6bsx8")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_u1ytt")
 theme_override_styles/normal = SubResource("StyleBoxTexture_q2uj8")
-
-[node name="TaskButton" parent="." instance=ExtResource("9_ifg48")]
-layout_mode = 0
-offset_left = 57.0
-offset_top = 683.0
-offset_right = 471.0
-offset_bottom = 720.0
 
 [node name="Art Button" parent="." instance=ExtResource("10_ifg48")]
 layout_mode = 0
@@ -144,3 +135,18 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_7v3bx")
 visible = false
 position = Vector2(388, 768)
 texture = ExtResource("11_vjqhd")
+
+[node name="TaskButton" parent="." instance=ExtResource("9_ifg48")]
+z_index = 2
+layout_mode = 2
+offset_left = 69.0
+offset_top = 673.0
+offset_right = 471.0
+offset_bottom = 714.0
+
+[node name="Tasks" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 728.0
+offset_right = 421.0
+offset_bottom = 996.0
