@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c6sv8u6knr06"]
+[gd_scene load_steps=27 format=3 uid="uid://c6sv8u6knr06"]
 
 [ext_resource type="Script" uid="uid://bbvissij3hrsd" path="res://scripts/task_menu.gd" id="1_v5yyk"]
 [ext_resource type="Texture2D" uid="uid://cwit5vn85r2k2" path="res://assets/Background.png" id="2_ok212"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cpdabfxro0et5" path="res://assets/Side_Accent.png" id="9_ok212"]
 [ext_resource type="PackedScene" uid="uid://bgpd6kwrl6tnh" path="res://scenes/button.tscn" id="10_ifg48"]
 [ext_resource type="PackedScene" uid="uid://baqaqi68m6jtl" path="res://scenes/countdown_timer.tscn" id="10_vjqhd"]
+[ext_resource type="Texture2D" uid="uid://di7n8vwi7arcs" path="res://assets/Add-8.png" id="11_vjqhd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqdtw"]
 texture = ExtResource("2_ok212")
@@ -48,6 +49,17 @@ texture = ExtResource("6_6bsx8")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ok212"]
 texture = ExtResource("6_6bsx8")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fg8os"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_siv5o"]
+texture = ExtResource("11_vjqhd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fk18j"]
+texture = ExtResource("11_vjqhd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7v3bx"]
+texture = ExtResource("11_vjqhd")
 
 [node name="Task Menu" type="Control"]
 layout_mode = 3
@@ -116,3 +128,19 @@ offset_left = 85.0
 offset_top = 473.0
 offset_right = 91.0
 offset_bottom = 483.0
+
+[node name="Add Task Button" parent="." instance=ExtResource("10_ifg48")]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 733.0
+offset_right = 472.0
+offset_bottom = 799.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fg8os")
+theme_override_styles/hover = SubResource("StyleBoxTexture_siv5o")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fk18j")
+theme_override_styles/normal = SubResource("StyleBoxTexture_7v3bx")
+
+[node name="Add-8" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(388, 768)
+texture = ExtResource("11_vjqhd")
