@@ -33,14 +33,17 @@ func change_scene(nextScene):
 func _on_pressed() -> void:
 	animation_player.play("press")
 	change_scene(name)
-	if button.name == "Add Task Button":
-		#print ("Add task started")
-		#var new_task_button = TASK_BUTTON.instantiate()
-		##tasks.add_child(new_task_button)
-		#new_task_button.position = Vector2(-360, task_number * 50 - 10)
-		#add_child(new_task_button)
-		button.position.y += 50
-		#task_number += 1
+	#if button.name == "Add Task Button":
+		##print ("Add task started")
+		##var new_task_button = TASK_BUTTON.instantiate()
+		###tasks.add_child(new_task_button)
+		##new_task_button.position = Vector2(-360, task_number * 50 - 10)
+		##add_child(new_task_button)
+		##button.position.y += 50
+		##task_number += 1
+	#
+	#if button.name == "Delete Task Button":
+		##button.position.y -= 50
 
 #=================== On Mouse Entered ===================
 #POST: SFX plays

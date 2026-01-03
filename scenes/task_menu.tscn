@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://c6sv8u6knr06"]
+[gd_scene load_steps=33 format=3 uid="uid://c6sv8u6knr06"]
 
 [ext_resource type="Script" uid="uid://b2p7pl4xli4n3" path="res://scripts/button_manager.gd" id="1_vjqhd"]
 [ext_resource type="Texture2D" uid="uid://cwit5vn85r2k2" path="res://assets/Background.png" id="2_ok212"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bgpd6kwrl6tnh" path="res://scenes/button.tscn" id="10_ifg48"]
 [ext_resource type="PackedScene" uid="uid://baqaqi68m6jtl" path="res://scenes/countdown_timer.tscn" id="10_vjqhd"]
 [ext_resource type="Texture2D" uid="uid://di7n8vwi7arcs" path="res://assets/Add-8.png" id="11_vjqhd"]
+[ext_resource type="Texture2D" uid="uid://d6r5fkmsj8nq" path="res://assets/Asset 6.png" id="12_fg8os"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqdtw"]
 texture = ExtResource("2_ok212")
@@ -60,6 +61,20 @@ texture = ExtResource("11_vjqhd")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7v3bx"]
 texture = ExtResource("11_vjqhd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qsaem"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xbisw"]
+texture = ExtResource("12_fg8os")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4xei8"]
+texture = ExtResource("12_fg8os")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_amcub"]
+texture = ExtResource("12_fg8os")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hgh2i"]
+texture = ExtResource("12_fg8os")
 
 [node name="Task Menu" type="Control"]
 layout_mode = 3
@@ -147,10 +162,29 @@ offset_right = 481.0
 offset_bottom = 722.0
 
 [node name="Tasks" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 67.0
 offset_top = 728.0
 offset_right = 421.0
 offset_bottom = 996.0
 
+[node name="Asset6" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(373, 776)
+texture = ExtResource("12_fg8os")
+
+[node name="Delete Task Button" parent="." instance=ExtResource("10_ifg48")]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 736.0
+offset_right = 429.0
+offset_bottom = 780.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_qsaem")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_xbisw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4xei8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_amcub")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hgh2i")
+
 [connection signal="pressed" from="Add Task Button" to="." method="_on_add_task_button_pressed"]
+[connection signal="pressed" from="Delete Task Button" to="." method="_on_delete_task_button_pressed"]
