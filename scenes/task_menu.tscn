@@ -1,5 +1,6 @@
-[gd_scene load_steps=26 format=3 uid="uid://c6sv8u6knr06"]
+[gd_scene load_steps=27 format=3 uid="uid://c6sv8u6knr06"]
 
+[ext_resource type="Script" uid="uid://b2p7pl4xli4n3" path="res://scripts/button_manager.gd" id="1_vjqhd"]
 [ext_resource type="Texture2D" uid="uid://cwit5vn85r2k2" path="res://assets/Background.png" id="2_ok212"]
 [ext_resource type="Texture2D" uid="uid://dp0l3ngqm6f0g" path="res://assets/Asset 12-8.png" id="3_ifg48"]
 [ext_resource type="Texture2D" uid="uid://clewjsrdesvdf" path="res://assets/4by3 Box-8.png" id="4_vjqhd"]
@@ -67,6 +68,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_vjqhd")
 
 [node name="Background Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -122,10 +124,10 @@ offset_bottom = 483.0
 
 [node name="Add Task Button" parent="." instance=ExtResource("10_ifg48")]
 layout_mode = 0
-offset_left = 428.0
-offset_top = 733.0
-offset_right = 472.0
-offset_bottom = 799.0
+offset_left = 438.0
+offset_top = 728.0
+offset_right = 482.0
+offset_bottom = 794.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_fg8os")
 theme_override_styles/hover = SubResource("StyleBoxTexture_siv5o")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_fk18j")
@@ -140,9 +142,9 @@ texture = ExtResource("11_vjqhd")
 z_index = 2
 layout_mode = 2
 offset_left = 69.0
-offset_top = 673.0
-offset_right = 471.0
-offset_bottom = 714.0
+offset_top = 681.0
+offset_right = 481.0
+offset_bottom = 722.0
 
 [node name="Tasks" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -150,3 +152,5 @@ offset_left = 67.0
 offset_top = 728.0
 offset_right = 421.0
 offset_bottom = 996.0
+
+[connection signal="pressed" from="Add Task Button" to="." method="_on_add_task_button_pressed"]

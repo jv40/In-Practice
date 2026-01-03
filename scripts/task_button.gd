@@ -49,3 +49,6 @@ func _process (delta: float) -> void:
 		
 	if line_edit.placeholder_text == "" and line_edit.is_editing() == false:
 		line_edit.placeholder_text = "insert text here|"
+
+func _on_line_edit_editing_toggled(toggled_on: bool) -> void:
+	line_edit.placeholder_text = ""
