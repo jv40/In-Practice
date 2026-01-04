@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://crpa3genubama"]
+
+[ext_resource type="Script" uid="uid://vw46wp771o6u" path="res://scripts/artwork.gd" id="1_g3yds"]
+
+[node name="Artwork" type="Node2D"]
+script = ExtResource("1_g3yds")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
