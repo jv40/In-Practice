@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cmpihwnimkam5"]
+[gd_scene load_steps=22 format=3 uid="uid://cmpihwnimkam5"]
 
 [ext_resource type="Script" uid="uid://scn7flgfyhof" path="res://scripts/home_menu.gd" id="1_ic7dy"]
 [ext_resource type="Texture2D" uid="uid://cwit5vn85r2k2" path="res://assets/Background.png" id="2_5gfed"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cpdabfxro0et5" path="res://assets/Side_Accent.png" id="5_8an65"]
 [ext_resource type="PackedScene" uid="uid://bgpd6kwrl6tnh" path="res://scenes/button.tscn" id="7_lib45"]
 [ext_resource type="Texture2D" uid="uid://c3a3s1vobdr38" path="res://assets/Background Panel.png" id="9_ar0pq"]
+[ext_resource type="PackedScene" uid="uid://crpa3genubama" path="res://scenes/artwork.tscn" id="10_kr61x"]
 [ext_resource type="Texture2D" uid="uid://cb53jmfkybi45" path="res://assets/Art_Button.png" id="14_orfrh"]
 [ext_resource type="Texture2D" uid="uid://dp0l3ngqm6f0g" path="res://assets/Asset 12-8.png" id="15_cy26f"]
 
@@ -73,6 +74,7 @@ position = Vector2(250, 204)
 texture = ExtResource("4_lm8mo")
 
 [node name="SideAccent" type="Sprite2D" parent="."]
+z_index = 2
 position = Vector2(7, 721)
 texture = ExtResource("5_8an65")
 
@@ -103,7 +105,10 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_md5xt")
 theme_override_styles/normal = SubResource("StyleBoxTexture_vaio3")
 
 [node name="BackgroundPanel" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(250, 501)
 texture = ExtResource("9_ar0pq")
+
+[node name="Artwork" parent="." instance=ExtResource("10_kr61x")]
 
 [connection signal="tree_entered" from="Home But" to="." method="_on_home_but_tree_entered"]
