@@ -35,9 +35,9 @@ func _process (delta: float) -> void:
 	if is_task_done() == true:
 		animation_player.play("completed")
 		var style = task_button.get_theme_stylebox("normal")
-		if style is StyleBoxTexture:
-			style.texture = COMPLETED_TASK_BAR
-
+		#if style is StyleBoxTexture:
+			#style.texture = COMPLETED_TASK_BAR
+	
 	else:
 		animation_player.play("RESET")
 		var style = task_button.get_theme_stylebox("normal")
