@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cmpihwnimkam5"]
+[gd_scene load_steps=21 format=3 uid="uid://cmpihwnimkam5"]
 
 [ext_resource type="Script" uid="uid://scn7flgfyhof" path="res://scripts/home_menu.gd" id="1_ic7dy"]
 [ext_resource type="Texture2D" uid="uid://cwit5vn85r2k2" path="res://assets/Background.png" id="2_5gfed"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://mrutuhacc25s" path="res://assets/Window Border-8.png" id="4_lm8mo"]
 [ext_resource type="Texture2D" uid="uid://cpdabfxro0et5" path="res://assets/Side_Accent.png" id="5_8an65"]
 [ext_resource type="PackedScene" uid="uid://bgpd6kwrl6tnh" path="res://scenes/button.tscn" id="7_lib45"]
+[ext_resource type="Texture2D" uid="uid://c3a3s1vobdr38" path="res://assets/Background Panel.png" id="9_ar0pq"]
 [ext_resource type="Texture2D" uid="uid://cb53jmfkybi45" path="res://assets/Art_Button.png" id="14_orfrh"]
 [ext_resource type="Texture2D" uid="uid://dp0l3ngqm6f0g" path="res://assets/Asset 12-8.png" id="15_cy26f"]
 
@@ -53,6 +54,7 @@ grow_vertical = 2
 script = ExtResource("1_ic7dy")
 
 [node name="Background Panel" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -66,7 +68,8 @@ position = Vector2(250, 195)
 texture = ExtResource("3_8hgdf")
 
 [node name="WindowBorder-8" type="Sprite2D" parent="."]
-position = Vector2(250, 195)
+z_index = 1
+position = Vector2(250, 204)
 texture = ExtResource("4_lm8mo")
 
 [node name="SideAccent" type="Sprite2D" parent="."]
@@ -74,6 +77,7 @@ position = Vector2(7, 721)
 texture = ExtResource("5_8an65")
 
 [node name="Art But" parent="." instance=ExtResource("7_lib45")]
+z_index = 2
 layout_mode = 0
 offset_left = 0.0
 offset_top = 394.0
@@ -86,6 +90,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_tjbjj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_y3dyl")
 
 [node name="Home But" parent="." instance=ExtResource("7_lib45")]
+z_index = 2
 layout_mode = 0
 offset_left = 410.0
 offset_top = 385.0
@@ -96,5 +101,9 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_1r5uv")
 theme_override_styles/hover = SubResource("StyleBoxTexture_krlag")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_md5xt")
 theme_override_styles/normal = SubResource("StyleBoxTexture_vaio3")
+
+[node name="BackgroundPanel" type="Sprite2D" parent="."]
+position = Vector2(250, 501)
+texture = ExtResource("9_ar0pq")
 
 [connection signal="tree_entered" from="Home But" to="." method="_on_home_but_tree_entered"]
