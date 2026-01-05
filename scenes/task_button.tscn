@@ -114,6 +114,7 @@ _data = {
 [sub_resource type="CanvasTexture" id="CanvasTexture_hpvvb"]
 
 [node name="TaskButton" type="Button"]
+z_index = 2
 offset_right = 414.0
 offset_bottom = 37.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6k6gp")
@@ -132,9 +133,9 @@ texture = ExtResource("2_6jlle")
 [node name="LineEdit" type="LineEdit" parent="."]
 layout_mode = 0
 offset_left = 51.0
-offset_top = 1.0
+offset_top = 3.0
 offset_right = 414.0
-offset_bottom = 40.0
+offset_bottom = 42.0
 theme_override_colors/font_placeholder_color = Color(100, 100, 100, 0.688)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_6k6gp")
