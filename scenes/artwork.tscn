@@ -1,9 +1,10 @@
-[gd_scene load_steps=175 format=3 uid="uid://crpa3genubama"]
+[gd_scene load_steps=184 format=3 uid="uid://crpa3genubama"]
 
 [ext_resource type="Script" uid="uid://vw46wp771o6u" path="res://scripts/artwork.gd" id="1_g3yds"]
 [ext_resource type="Texture2D" uid="uid://cjjpkpxlv5wui" path="res://gifs/Pokemon Waterfall Spritesheet.png" id="2_ckgfw"]
 [ext_resource type="Texture2D" uid="uid://cprddfo6y8vp1" path="res://gifs/Digimon Train Station Spritesheet.png" id="3_n38qn"]
 [ext_resource type="Texture2D" uid="uid://bm63vxu2xnod1" path="res://gifs/Pokemon Blue Bedroom Spritesheet.png" id="3_s1jrx"]
+[ext_resource type="Texture2D" uid="uid://dmrckao2di3gx" path="res://gifs/Frog? Spritesheet.png" id="4_kk5co"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s1jrx"]
 atlas = ExtResource("2_ckgfw")
@@ -617,6 +618,38 @@ region = Rect2(600, 7436, 600, 338)
 atlas = ExtResource("3_n38qn")
 region = Rect2(1200, 7436, 600, 338)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_4x55b"]
+atlas = ExtResource("4_kk5co")
+region = Rect2(0, 0, 498, 491)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_po6k3"]
+atlas = ExtResource("4_kk5co")
+region = Rect2(498, 0, 498, 491)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orj5h"]
+atlas = ExtResource("4_kk5co")
+region = Rect2(996, 0, 498, 491)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsk1e"]
+atlas = ExtResource("4_kk5co")
+region = Rect2(1494, 0, 498, 491)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bldq"]
+atlas = ExtResource("4_kk5co")
+region = Rect2(0, 491, 498, 491)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4t82n"]
+atlas = ExtResource("4_kk5co")
+region = Rect2(498, 491, 498, 491)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_od6vu"]
+atlas = ExtResource("4_kk5co")
+region = Rect2(996, 491, 498, 491)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmcex"]
+atlas = ExtResource("4_kk5co")
+region = Rect2(1494, 491, 498, 491)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ou3wo"]
 atlas = ExtResource("3_s1jrx")
 region = Rect2(0, 0, 850, 640)
@@ -1154,6 +1187,35 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_4x55b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_po6k3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orj5h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsk1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0bldq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4t82n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_od6vu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmcex")
+}],
+"loop": true,
+"name": &"frog?",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ou3wo")
 }, {
 "duration": 1.0,
@@ -1211,7 +1273,7 @@ script = ExtResource("1_g3yds")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ou3wo")
-animation = &"digimon_train_station"
+animation = &"frog?"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false

@@ -1,0 +1,95 @@
+[gd_scene load_steps=13 format=3 uid="uid://djpgwybk3o001"]
+
+[ext_resource type="Script" uid="uid://bcs2vy8kvnrkk" path="res://scripts/artwork_select_button.gd" id="1_6liif"]
+[ext_resource type="Texture2D" uid="uid://dmllikwujfgmr" path="res://assets/Art Highlight-8.png" id="1_7vci1"]
+[ext_resource type="Texture2D" uid="uid://siebjw4j1gge" path="res://assets/Current Task Bar-8.png" id="2_6liif"]
+[ext_resource type="FontFile" uid="uid://ca4r3ggslw2lm" path="res://assets/avenir-lt-pro/AvenirLTProLight.otf" id="3_bhhee"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bhhee"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jiunv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h37xr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8je81"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_poyy7"]
+
+[sub_resource type="Animation" id="Animation_bhhee"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CurrentTaskBar-8:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_6liif"]
+resource_name = "show_art_highlight"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CurrentTaskBar-8:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jiunv"]
+_data = {
+&"RESET": SubResource("Animation_bhhee"),
+&"show_art_highlight": SubResource("Animation_6liif")
+}
+
+[node name="ArtworkSelectButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 24.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bhhee")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_jiunv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_h37xr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8je81")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_poyy7")
+script = ExtResource("1_6liif")
+
+[node name="ArtHighlight-8" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(120, 21)
+texture = ExtResource("1_7vci1")
+
+[node name="CurrentTaskBar-8" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(160, 13)
+scale = Vector2(1, 1.2)
+texture = ExtResource("2_6liif")
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_top = 1.0
+offset_right = 305.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_bhhee")
+theme_override_font_sizes/font_size = 28
+text = "Pokemon Blue Bedroom"
+horizontal_alignment = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_jiunv")
+}
+
+[connection signal="artwork_selected" from="." to="." method="_on_artwork_selected"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,6 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://cnsdgasqljm01"]
+[gd_scene load_steps=25 format=3 uid="uid://cnsdgasqljm01"]
 
-[ext_resource type="Script" uid="uid://scn7flgfyhof" path="res://scripts/home_menu.gd" id="1_yk7u2"]
+[ext_resource type="Script" uid="uid://bnhi7furiv0gx" path="res://scripts/art_menu.gd" id="1_wl5tr"]
 [ext_resource type="Texture2D" uid="uid://cwit5vn85r2k2" path="res://assets/Background.png" id="2_wl5tr"]
 [ext_resource type="Texture2D" uid="uid://clewjsrdesvdf" path="res://assets/4by3 Box-8.png" id="3_hhp54"]
 [ext_resource type="Texture2D" uid="uid://mrutuhacc25s" path="res://assets/Window Border-8.png" id="4_orpd8"]
@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://dp0l3ngqm6f0g" path="res://assets/Asset 12-8.png" id="8_2umyb"]
 [ext_resource type="Texture2D" uid="uid://c3a3s1vobdr38" path="res://assets/Background Panel.png" id="9_6ovyu"]
 [ext_resource type="PackedScene" uid="uid://crpa3genubama" path="res://scenes/artwork.tscn" id="10_ff2rn"]
+[ext_resource type="PackedScene" uid="uid://djpgwybk3o001" path="res://scenes/artwork_select_button.tscn" id="11_wl5tr"]
+[ext_resource type="Texture2D" uid="uid://babyvukrvbqbe" path="res://assets/Slider Handle-8.png" id="12_orpd8"]
+[ext_resource type="Texture2D" uid="uid://b5wppa6qlcrn4" path="res://assets/Slider Bar-8.png" id="13_51u0g"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w7cjy"]
 texture = ExtResource("2_wl5tr")
@@ -45,14 +48,14 @@ texture = ExtResource("8_2umyb")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vaio3"]
 texture = ExtResource("8_2umyb")
 
-[node name="HomeMenu" type="Control"]
+[node name="ArtMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_yk7u2")
+script = ExtResource("1_wl5tr")
 
 [node name="Background Panel" type="Panel" parent="."]
 visible = false
@@ -111,4 +114,23 @@ texture = ExtResource("9_6ovyu")
 
 [node name="Artwork" parent="." instance=ExtResource("10_ff2rn")]
 
+[node name="ArtworkSelectButton" parent="." instance=ExtResource("11_wl5tr")]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 507.0
+offset_right = 99.0
+offset_bottom = 531.0
+
+[node name="SliderHandle-8" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(463, 517)
+texture = ExtResource("12_orpd8")
+
+[node name="SliderBar-8" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(463, 761)
+texture = ExtResource("13_51u0g")
+
 [connection signal="tree_entered" from="Home But" to="." method="_on_home_but_tree_entered"]
+[connection signal="artwork_selected" from="ArtworkSelectButton" to="." method="_on_artwork_selected"]
+[connection signal="pressed" from="ArtworkSelectButton" to="." method="_on_artwork_select_button_pressed"]

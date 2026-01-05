@@ -26,6 +26,10 @@ func change_scene(nextScene):
 			return
 		await get_tree().create_timer(0.2).timeout
 		get_tree().change_scene_to_file("res://scenes/home_menu.tscn")
+	elif nextScene == "Art But" || nextScene == "Art Button":
+		await get_tree().create_timer(0.2).timeout
+		get_tree().change_scene_to_file("res://scenes/art_menu.tscn")
+		
 
 #=================== On Press ===================
 #PRE: Button must lead to another page upon press
