@@ -10,6 +10,7 @@ var artwork_buttons = []
 func _ready() -> void:
 	create_new_button("Digimon Train Station")
 	create_new_button("Frog?")
+	create_new_button("Pokemon Waterfall")
 	
 	for button in get_tree().get_nodes_in_group("artwork_buttons"):
 		button.artwork_selected.connect(_on_artwork_selected)

@@ -14,11 +14,19 @@ signal artwork_selected(artwork_name)  # Signal that sends text
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	add_to_group("artwork_buttons")
+	
+	await get_tree().process_frame #Wait one frame
+	
 	var texture_width = art_highlight_bar.texture.get_size().x
 	var width = label.size.x
 	artwork_select_button.size.x = width
 	art_highlight_bar.scale.x = (width + 50) / texture_width
-	animation_player.play("RESET")
+	
+	if label.text == Globals.CHOSEN_GIF:
+		currently_selected = true
+		select_current()
+	else:
+		animation_player.play("RESET")
 	pass # Replace with function body.
 
 
