@@ -158,6 +158,7 @@ position = Vector2(349, 599)
 texture = ExtResource("11_653sy")
 
 [node name="Load But" parent="." instance=ExtResource("18_hvx0t")]
+visible = false
 z_index = 2
 layout_mode = 0
 offset_left = 371.0
@@ -184,6 +185,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_ogu25")
 theme_override_styles/normal = SubResource("StyleBoxTexture_86nr7")
 
 [node name="Settings But" parent="." instance=ExtResource("18_hvx0t")]
+visible = false
 z_index = 2
 layout_mode = 0
 offset_left = 302.0
