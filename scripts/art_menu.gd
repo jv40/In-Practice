@@ -11,6 +11,11 @@ func _ready() -> void:
 	create_new_button("Digimon Train Station")
 	create_new_button("Frog?")
 	create_new_button("Pokemon Waterfall")
+	create_new_button("Kingdom Hearts Ocean")
+	create_new_button("Bloodborne Study")
+	create_new_button("Dark Souls Bonfire")
+	create_new_button("Megaman 8 Stage Select")
+	create_new_button("Megaman 8 Frost Man")
 	
 	for button in get_tree().get_nodes_in_group("artwork_buttons"):
 		button.artwork_selected.connect(_on_artwork_selected)
