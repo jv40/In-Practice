@@ -41,6 +41,10 @@ texture = ExtResource("8_2umyb")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_krlag"]
 texture = ExtResource("8_2umyb")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_md5xt"]
 texture = ExtResource("8_2umyb")
